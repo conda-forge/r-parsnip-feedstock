@@ -1,4 +1,4 @@
-{% set version = '0.0.1' %}
+{% set version = '0.0.2' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -7,16 +7,14 @@ package:
   version: {{ version|replace("-", "_") }}
 
 source:
-  fn: parsnip_{{ version }}.tar.gz
   url:
     - {{ cran_mirror }}/src/contrib/parsnip_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/parsnip/parsnip_{{ version }}.tar.gz
-  sha256: 7038b4ab4ed658b34014e8971c57242c0b4081b2bd837b169d654e4ccb76ad01
+  sha256: 42c8f5f210c95b269c1f7eb27ddc9f5d1e1d07899b11f6ffa3b2f120417d1e60
 
 build:
-  noarch: generic
   merge_build_host: True  # [win]
-  number: 1000
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -24,27 +22,28 @@ build:
 
 requirements:
   build:
+    - {{posix}}zip               # [win]
   host:
     - r-base
-    - r-dplyr
+    - r-dplyr >=0.8.0.1
     - r-generics
     - r-globals
     - r-glue
     - r-magrittr
     - r-purrr
-    - r-rlang >=0.3.0.1
-    - r-tibble
+    - r-rlang >=0.3.1
+    - r-tibble >=2.1.1
     - r-tidyr
   run:
     - r-base
-    - r-dplyr
+    - r-dplyr >=0.8.0.1
     - r-generics
     - r-globals
     - r-glue
     - r-magrittr
     - r-purrr
-    - r-rlang >=0.3.0.1
-    - r-tibble
+    - r-rlang >=0.3.1
+    - r-tibble >=2.1.1
     - r-tidyr
 
 test:
@@ -63,10 +62,28 @@ about:
 
 extra:
   recipe-maintainers:
-    - johanneskoester
-    - bgruening
-    - daler
-    - jdblischak
-    - cbrueffer
-    - dbast
     - apcamargo
+    - conda-forge/r
+
+# Package: parsnip
+# Version: 0.0.2
+# Title: A Common API to Modeling and Analysis Functions
+# Description: A common interface is provided to allow users to specify a model without having to remember the different argument names across different functions or computational engines (e.g. 'R', 'Spark', 'Stan', etc).
+# Authors@R: c( person("Max", "Kuhn", , "max@rstudio.com", c("aut", "cre")), person("Davis", "Vaughan", , "davis@rstudio.com", c("aut")), person("RStudio", role = "cph"))
+# Maintainer: Max Kuhn <max@rstudio.com>
+# URL: https://tidymodels.github.io/parsnip
+# BugReports: https://github.com/tidymodels/parsnip/issues
+# License: GPL-2
+# Encoding: UTF-8
+# LazyData: true
+# ByteCompile: true
+# VignetteBuilder: knitr
+# Depends: R (>= 2.10)
+# Imports: dplyr (>= 0.8.0.1), rlang (>= 0.3.1), purrr, utils, tibble (>= 2.1.1), generics, glue, magrittr, stats, tidyr, globals
+# RoxygenNote: 6.1.1
+# Suggests: testthat, knitr, rmarkdown, survival, keras, xgboost, covr, C50, sparklyr (>= 1.0.0), earth, glmnet, kernlab, kknn, randomForest, ranger, rpart, MASS, nlme
+# NeedsCompilation: no
+# Packaged: 2019-03-22 18:20:17 UTC; max
+# Author: Max Kuhn [aut, cre], Davis Vaughan [aut], RStudio [cph]
+# Repository: CRAN
+# Date/Publication: 2019-03-22 19:50:02 UTC
