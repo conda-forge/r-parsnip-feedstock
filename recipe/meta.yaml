@@ -1,4 +1,4 @@
-{% set version = "0.1.0" %}
+{% set version = "0.1.1" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/parsnip_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/parsnip/parsnip_{{ version }}.tar.gz
-  sha256: ab5f5f0871f3f222f61d809d8b43ca0b5a683da5cdf579f3a399951f2a6f487c
+  sha256: f49038cc71099df7956dfbdf90fbc7449c456a8482e41955c1968a26f55263dc
 
 build:
   merge_build_host: true  # [win]
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -58,8 +58,7 @@ test:
 about:
   home: https://tidymodels.github.io/parsnip, https://github.com/tidymodels/parsnip
   license: GPL-2
-  summary: A common interface is provided to allow users to specify a model without having to remember the different argument names across different functions or
-    computational engines (e.g. 'R', 'Spark', 'Stan', etc).
+  summary: A common interface is provided to allow users to specify a model without having to remember the different argument names across different functions or computational engines (e.g. 'R', 'Spark', 'Stan', etc).
   license_family: GPL2
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
