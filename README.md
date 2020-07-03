@@ -5,7 +5,7 @@ Home: https://tidymodels.github.io/parsnip, https://github.com/tidymodels/parsni
 
 Package license: GPL-2
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: A common interface is provided to allow users to specify a model without having to remember the different argument names across different functions or computational engines (e.g. 'R', 'Spark', 'Stan', etc).
 
