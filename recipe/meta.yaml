@@ -1,4 +1,4 @@
-{% set version = "0.1.3" %}
+{% set version = "0.1.4" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/parsnip_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/parsnip/parsnip_{{ version }}.tar.gz
-  sha256: a3a18e0b2c8744c1ca29349a5b332b45577816fd78963ac73b110014240e2288
+  sha256: 598b441882a426354ef15b13110ce8fadcbe89e87b1638579e73ebd801416484
 
 build:
   merge_build_host: true  # [win]
@@ -57,7 +57,7 @@ test:
 
 about:
   home: https://tidymodels.github.io/parsnip, https://github.com/tidymodels/parsnip
-  license: GPL-2
+  license: GPL-2.0-only
   summary: A common interface is provided to allow users to specify a model without having to remember the different argument names across different functions or computational engines (e.g. 'R', 'Spark', 'Stan', etc).
   license_family: GPL2
   license_file:
@@ -65,8 +65,8 @@ about:
 
 extra:
   recipe-maintainers:
-    - apcamargo
     - conda-forge/r
+    - apcamargo
 
 # Package: parsnip
 # Version: 0.0.4

@@ -3,13 +3,11 @@ About r-parsnip
 
 Home: https://tidymodels.github.io/parsnip, https://github.com/tidymodels/parsnip
 
-Package license: GPL-2
+Package license: GPL-2.0-only
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-parsnip-feedstock/blob/master/LICENSE.txt)
 
 Summary: A common interface is provided to allow users to specify a model without having to remember the different argument names across different functions or computational engines (e.g. 'R', 'Spark', 'Stan', etc).
-
-
 
 Current build status
 ====================
