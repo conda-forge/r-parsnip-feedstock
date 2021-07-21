@@ -3,7 +3,7 @@ About r-parsnip
 
 Home: https://tidymodels.github.io/parsnip, https://github.com/tidymodels/parsnip
 
-Package license: GPL-2.0-only
+Package license: MIT
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-parsnip-feedstock/blob/master/LICENSE.txt)
 
