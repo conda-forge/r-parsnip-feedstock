@@ -26,11 +26,13 @@ requirements:
     - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
+    - r-cli
     - r-dplyr >=0.8.0.1
-    - r-generics >=0.1.0
+    - r-generics >=0.1.0.9000
+    - r-ggplot2
     - r-globals
     - r-glue
-    - r-hardhat >=0.1.5.9000
+    - r-hardhat >=0.1.6.9001
     - r-lifecycle
     - r-magrittr
     - r-prettyunits
@@ -39,13 +41,16 @@ requirements:
     - r-tibble >=2.1.1
     - r-tidyr >=1.0.0
     - r-vctrs >=0.2.0
+    - r-withr
   run:
     - r-base
+    - r-cli
     - r-dplyr >=0.8.0.1
-    - r-generics >=0.1.0
+    - r-generics >=0.1.0.9000
+    - r-ggplot2
     - r-globals
     - r-glue
-    - r-hardhat >=0.1.5.9000
+    - r-hardhat >=0.1.6.9001
     - r-lifecycle
     - r-magrittr
     - r-prettyunits
@@ -54,6 +59,7 @@ requirements:
     - r-tibble >=2.1.1
     - r-tidyr >=1.0.0
     - r-vctrs >=0.2.0
+    - r-withr
 
 test:
   commands:
@@ -67,6 +73,7 @@ about:
   license_family: MIT
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/MIT
+    - LICENSE
 
 extra:
   recipe-maintainers:
