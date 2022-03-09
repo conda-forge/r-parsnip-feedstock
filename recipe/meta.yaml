@@ -1,4 +1,4 @@
-{% set version = "0.1.7" %}
+{% set version = "0.2.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/parsnip_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/parsnip/parsnip_{{ version }}.tar.gz
-  sha256: cb0587ca1a37bdf3f43cd74e5a9517c77b8a1567c7a399589893d3fbdbb39089
+  sha256: 7606ebee2317be6b5b93842dcbec670470fce290b37b211a4c987f1a121b413c
 
 build:
   merge_build_host: true  # [win]
@@ -26,11 +26,13 @@ requirements:
     - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
+    - r-cli
     - r-dplyr >=0.8.0.1
-    - r-generics >=0.1.0
+    - r-generics >=0.1.0.9000
+    - r-ggplot2
     - r-globals
     - r-glue
-    - r-hardhat >=0.1.5.9000
+    - r-hardhat >=0.1.6.9001
     - r-lifecycle
     - r-magrittr
     - r-prettyunits
@@ -39,13 +41,16 @@ requirements:
     - r-tibble >=2.1.1
     - r-tidyr >=1.0.0
     - r-vctrs >=0.2.0
+    - r-withr
   run:
     - r-base
+    - r-cli
     - r-dplyr >=0.8.0.1
-    - r-generics >=0.1.0
+    - r-generics >=0.1.0.9000
+    - r-ggplot2
     - r-globals
     - r-glue
-    - r-hardhat >=0.1.5.9000
+    - r-hardhat >=0.1.6.9001
     - r-lifecycle
     - r-magrittr
     - r-prettyunits
@@ -54,6 +59,7 @@ requirements:
     - r-tibble >=2.1.1
     - r-tidyr >=1.0.0
     - r-vctrs >=0.2.0
+    - r-withr
 
 test:
   commands:
@@ -67,6 +73,7 @@ about:
   license_family: MIT
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/MIT
+    - LICENSE
 
 extra:
   recipe-maintainers:
