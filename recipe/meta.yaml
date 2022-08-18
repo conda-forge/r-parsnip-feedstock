@@ -1,4 +1,4 @@
-{% set version = "1.0.0" %}
+{% set version = "1.0.1" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/parsnip_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/parsnip/parsnip_{{ version }}.tar.gz
-  sha256: 2199c4c37d21a99dd09ad98d6c8d41eb31229ce4d3d65b055d5925e35c499f53
+  sha256: be77b31c97057ced76c6817df8dbea8db4de2a688ffdd0ada8507e0a651af95f
 
 build:
   merge_build_host: true  # [win]
