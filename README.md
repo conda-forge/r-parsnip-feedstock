@@ -1,11 +1,11 @@
-About r-parsnip
-===============
+About r-parsnip-feedstock
+=========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-parsnip-feedstock/blob/main/LICENSE.txt)
 
 Home: https://tidymodels.github.io/parsnip, https://github.com/tidymodels/parsnip
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-parsnip-feedstock/blob/main/LICENSE.txt)
 
 Summary: A common interface is provided to allow users to specify a model without having to remember the different argument names across different functions or computational engines (e.g. 'R', 'Spark', 'Stan', etc).
 
