@@ -1,4 +1,4 @@
-{% set version = "1.4.1" %}
+{% set version = "1.5.0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/parsnip_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/parsnip/parsnip_{{ version }}.tar.gz
-  sha256: acdd5cae847a234bce29ff476a6f0187280663228d8ff1362cca08e831d9df72
+  sha256: cf31112d73f169aa67db244194b964e8ac9ab9aed8cd45f4e46a88da4c3d90c7
 
 build:
   number: 0
